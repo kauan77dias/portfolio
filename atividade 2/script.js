@@ -1,4 +1,4 @@
 function cliquei(){
-alert("vc tocou em mim")
+alert("ai safado VOCÊ tocou em mim")
 
 }
