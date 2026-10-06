@@ -3,8 +3,8 @@ let cont_azar = 0;
 
 
 function sorte(){
-  let min
-  let max
+  let min = 1
+  let max = 100
   let dif = max-min
   let aleatorio = Math.random();
   let num = min + Math.trunc(dif * aleatorio);
