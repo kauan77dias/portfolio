@@ -1,26 +1,22 @@
-let cont_sorte = 0;
-let cont_azar = 0;
-
-
-function sorte(){
-  let min
-  let max
+  let mostrar = document.getElementById("resultado");
+  let jogador = 0;
+  let computador = 0;
+  let min = 1
+  let max = 100
   let dif = max-min
   let aleatorio = Math.random();
-  let num = min + Math.trunc(dif * aleatorio);
+  computador = min + Math.trunc(dif * aleatorio);
 
+function adivinhe(){
+   jogador = Number(prompt("qual e o seu palpite?"))
 
-  if(num > 50){
-    cont_sorte++;
-    let mostrar = document.getElementById("resultado");
-    mostrar.innerHTML = `<p>sorte:${cont_sorte}</p>
-                          <p>azar: ${cont_azar}</p>
-                          <img src="sorte.jpeg">`;
-  }else{
-    cont_azar++;
-     let mostrar = document.getElementById("resultado");
-    mostrar.innerHTML = `<p>sorte:${cont_sorte}</p>
-                          <p>azar: ${cont_azar}</p>
-                          <img src="azar.png">`;
-  }
+     if(jogador < computador){
+     mostrar.innerHTML = `<p>você pensou em ${jogador},meu numero é <b>MAIOR</b>!</p>`
+   } else if(jogador > computador){
+     mostrar.innerHTML = `<p>você pensou em ${jogador},meu numero é <b>MENOR</b>!</p>`
+
+   } else if(jogador == computador){
+     mostrar.innerHTML = `<p><b>PARABÉMS!!!</B> você acertou! eu tinha pensadoem ${computador}</p>`
+}
+
 }
