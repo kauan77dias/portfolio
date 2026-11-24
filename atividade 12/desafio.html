@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>desafio</title>
+    <title>Sistema</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-       <h1></h1>
-    
-    <button onclick="basquete()"> começe a inscrição</button>
 
-    <div id="resultado">
-        <p></p>
-    </div>
+    <h1>Montador de times 2.0 100% sem vírus</h1>
+
+    <br>
+
+    <input placeholder="quantidade de inscritos..." id="inscritos">
+
+    <br>
+
+    <input id="Times" placeholder="Quantos times?">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <button onclick="inscrever(nome, time)" >se inscreva</button>
+
+    <p id="resultado"></p>
 
     <script src="script.js"></script>
 </body>
